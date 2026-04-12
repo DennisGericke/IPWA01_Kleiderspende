@@ -33,10 +33,69 @@
 </header>
 
     <main class="container my-5">
-        <div class="row text-center">
+        <div class="row text-center mb-5">
             <div class="col-12">
                 <h1>Willkommen bei der Kleiderspende Potsdam</h1>
                 <p class="lead">Schön, dass Sie uns unterstützen möchten. Über dieses Portal können Sie Ihre Spende unkompliziert registrieren.</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <form id="registrationForm" class="shadow p-4 rounded bg-white border">
+                    <h3 class="mb-4 text-center">Spende registrieren</h3>
+
+                    <div class="mb-3">
+                        <label for="clothingType" class="form-label">Was möchten Sie spenden?</label>
+                        <select class="form-select" id="clothingType" required>
+                            <option value="" selected disabled>Bitte wählen...</option>
+                            <option value="Jacken">Jacken</option>
+                            <option value="Pullover">Pullover</option>
+                            <option value="Shirts">Shirts</option>
+                            <option value="Hosen">Hosen</option>
+                            <option value="Schuhe">Schuhe</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="crisisRegion" class="form-label">Krisengebiet auswählen</label>
+                        <select class="form-select" id="crisisRegion" required>
+                            <option value="" selected disabled>Bitte wählen...</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="Syrien">Syrien</option>
+                            <option value="Iran">Iran</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label d-block fw-bold">Übergabeart</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="deliveryOption" id="pickup" value="pickup" checked>
+                            <label class="form-check-label" for="pickup">Abholung durch ein Sammelfahrzeug</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="deliveryOption" id="dropoff" value="dropoff">
+                            <label class="form-check-label" for="dropoff">Übergabe an der Geschäftsstelle</label>
+                        </div>
+                    </div>
+
+                    <div id="addressSection" class="p-3 bg-light rounded border mb-4">
+                        <h5 class="mb-3">Abholadresse</h5>
+                        <div class="row g-2">
+                            <div class="col-12 mb-2">
+                                <input type="text" class="form-control" id="street" placeholder="Straße und Hausnummer">
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control" id="zipCode" placeholder="PLZ" maxlength="5">
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control" id="city" placeholder="Stadt">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 py-2">Registrierung abschließen</button>
+                </form>
             </div>
         </div>
     </main>
