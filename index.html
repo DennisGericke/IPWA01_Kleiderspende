@@ -166,7 +166,20 @@
                 </div>
               </div>
             </div>
-
+            <div class="mb-4">
+              <label for="preferredDate" class="form-label fw-bold"
+                >Wunschtermin für die Übergabe/Abholung</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                id="preferredDate"
+                required
+              />
+              <div class="form-text">
+                Wählen Sie einen Tag, an dem Sie erreichbar sind.
+              </div>
+            </div>
             <button type="submit" class="btn btn-primary w-100 py-2">
               Registrierung abschließen
             </button>
@@ -174,7 +187,7 @@
 
           <div
             id="confirmationArea"
-            class="d-none mt-4 p-4 bg-success text-white rounded shadow text-center"
+            class="d-none mt-4 p-4 bg-info-subtle text-info-emphasis text-white rounded shadow text-center"
           >
             <h4 class="mb-3">Registrierung erfolgreich!</h4>
             <div id="confirmationDetails"></div>
